@@ -1,7 +1,7 @@
 import Topbar from "@/components/shared/Topbar";
 import Image from "next/image";
 import matrix from "@/assets/Matrix-bg.svg";
-import TopCoins from "@/components/shared/TopCoins";
+import TopCoins from "@/components/shared/TopCoinsContainer";
 
 export default function Home() {
   return (
