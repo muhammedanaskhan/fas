@@ -86,6 +86,11 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(16, 16, 16, 1) 100%);
 }
 
-.categoryCardSelectedShadow{
+.categoryCardSelectedShadow {
   box-shadow: inset 0px 0px 19.9px -3px #FA764C;
+}
+
+.selectedPhaseBg {
+  background: rgb(228, 87, 42);
+  background: linear-gradient(0deg, rgba(228, 87, 42, 1) 0%, rgba(250, 118, 76, 1) 100%);
 }

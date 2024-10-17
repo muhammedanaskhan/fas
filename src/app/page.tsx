@@ -5,6 +5,7 @@ import matrix from "@/assets/Matrix-bg.svg";
 import TopCoins from "@/components/shared/TopCoinsContainer";
 import { useState } from "react";
 import CategorySelectors from "@/components/sections/CategorySelectors";
+import PhaseSelectors from "@/components/sections/PhaseSelectors";
 
 export default function Home() {
 
@@ -18,9 +19,9 @@ export default function Home() {
       <TopCoins />
       <CategorySelectors selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
 
-      {/* <SubCategorySelectors selectedPhase={selectedPhase} setSelectedPhase={setSelectedPhase} />
+      <PhaseSelectors selectedPhase={selectedPhase} setSelectedPhase={setSelectedPhase} />
 
-      <DuelCards category={selectedCategory} phase={selectedPhase} />
+      {/* <DuelCards category={selectedCategory} phase={selectedPhase} />
 
       <Timer /> */}
     </div>
