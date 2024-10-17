@@ -12,8 +12,8 @@ const phases = [
         label: 'Live Duels',
     },
     {
-        name: 'bootsrapping',
-        label: 'Bootsrapping',
+        name: 'bootstrapping',
+        label: 'Bootstrapping',
     },
     {
         name: 'completed',
@@ -22,6 +22,7 @@ const phases = [
 ];
 
 const PhaseSelectors = ({ selectedPhase, setSelectedPhase }: PhaseSelectorsProps) => {
+    console.log("selectedPhase", selectedPhase);
     return (
         <div className='px-[50px] mt-4 '>
             <div className="bg-[#151515] bg-opacity-100 p-1 border-[1px] border-[#FFFFFF] border-opacity-[5%] w-fit rounded-[9px]">
