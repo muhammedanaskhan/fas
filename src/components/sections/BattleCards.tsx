@@ -7,6 +7,10 @@ import kamala from '@/assets/kamala.png'
 import gam from '@/assets/gam.png'
 import coing from '@/assets/coin.svg'
 import timer from '@/assets/timer.svg'
+import kzed from '@/assets/kzed.png'
+import flashBets from '@/assets/flash-bets.png'
+import randomAcc from '@/assets/random-acc.png'
+
 import BattleVoteBars from '../ui/BattleVoteBars'
 
 interface BattleCardsProps {
@@ -20,10 +24,10 @@ const PHASE_DURATIONS = [45000, 60000, 60000, 30000];
 const BattleCards = ({ category, phase }: BattleCardsProps) => {
 
     const [battles, setBattles] = useState([
-        { id: 1, name: 'Will $MOO Hit $1.00 ', image: moo, category: 'crypto', volume: '200K', votesOn10: 6, currentPhase: 0, timeLeft: PHASE_DURATIONS[0] },
-        { id: 2, name: 'Will Trump Win US Election', image: trump, category: 'us-election', volume: '2.6M', votesOn10: 9, currentPhase: 0, timeLeft: PHASE_DURATIONS[1] },
-        { id: 3, name: 'Will Kamala Harris Win US Election', image: kamala, category: 'us-election', volume: '2.6M', votesOn10: 1, currentPhase: 0, timeLeft: PHASE_DURATIONS[2] },
-        { id: 4, name: 'Will GAM win Worlds 2024', image: gam, category: 'sports', volume: '10.45K', votesOn10: 6, currentPhase: 0, timeLeft: PHASE_DURATIONS[3] },
+        { id: 1, name: 'Will $MOO Hit $1.00 ', image: moo, category: 'crypto', volume: '200K', votesOn10: 6, currentPhase: 0, timeLeft: PHASE_DURATIONS[0], creator: 'KZED', creatorImage: kzed },
+        { id: 2, name: 'Will Trump Win US Election', image: trump, category: 'us-election', volume: '2.6M', votesOn10: 9, currentPhase: 0, timeLeft: PHASE_DURATIONS[1], creator: 'Flash Bets', creatorImage: flashBets },
+        { id: 3, name: 'Will Kamala Harris Win US Election', image: kamala, category: 'us-election', volume: '2.6M', votesOn10: 1, currentPhase: 0, timeLeft: PHASE_DURATIONS[2], creator: 'Flash Bets', creatorImage: flashBets },
+        { id: 4, name: 'Will GAM win Worlds 2024', image: gam, category: 'sports', volume: '10.45K', votesOn10: 6, currentPhase: 0, timeLeft: PHASE_DURATIONS[3], creator: '0x4743..69fc', creatorImage: randomAcc },
     ]);
 
     useEffect(() => {
@@ -100,6 +104,12 @@ const BattleCards = ({ category, phase }: BattleCardsProps) => {
                     </div>
                     <div className="flex justify-between mt-3">
                         <span className="text-[10px] text-[#9CA3AF]">Created By:</span>
+
+                        <div className="flex gap-2 items-center">
+                            <Image src={battle.creatorImage} alt={battle.creator} width={18} height={18} className='rounded-full' />
+                            <span className="text-[10px]">{battle.creator}</span>
+                        </div>
+
                     </div>
                 </div>
             ))}
