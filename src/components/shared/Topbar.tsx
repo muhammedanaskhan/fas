@@ -6,6 +6,8 @@ import hamburger from '@/assets/hamburger.svg'
 
 import Image from 'next/image'
 import { Input } from '../ui/input'
+import { ConnectButton } from '@rainbow-me/rainbowkit'
+import { CustomConnectButton } from '../ui/ConnectButton'
 
 const Topbar = () => {
 
@@ -28,7 +30,8 @@ const Topbar = () => {
                     />
                     <Image src={search} alt='search' width={28} height={28} className='absolute top-1/2 right-5 transform -translate-y-1/2' />
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center gap-3">
+                    <CustomConnectButton />
                     <Image src={hamburger} alt='hamburger' width={32} height={32} className='cursor-pointer' />
                 </div>
 
